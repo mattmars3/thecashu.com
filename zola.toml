@@ -1,7 +1,6 @@
 base_url = "https://thecashu.com"
 compile_sass = true
 build_search_index = true
-theme = "thecashu"
 
 taxonomies = [
     {name = "categories", feed = true},

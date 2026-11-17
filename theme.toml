@@ -35,3 +35,6 @@ nav_links = [
 #   name    — display text
 #   path    — local path (e.g. "/about", "/blog") or absolute URL
 # Landing lines accept `text` plus an optional `align` value: left, center, or right.
+
+
+
