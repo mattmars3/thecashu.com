@@ -1,0 +1,18 @@
+// Links — minimal stacked link list
+// Consumer: links.html
+
+.links-list {
+  list-style: none;
+  width: 100%;
+  padding: 1rem 0; // knob: links list vertical padding
+  text-align: center;
+
+  li {
+    margin-bottom: 1.25rem; // knob: space between link entries
+  }
+
+  a {
+    font-size: clamp(1.5rem, 5vw, 2rem); // knob: link font size
+    color: var(--text);
+  }
+}

@@ -1,0 +1,47 @@
+// Base — foundational reset and layout
+// Consumers: all templates
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition {
+  background-color: var(--bg, #f6f4f1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0s !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: $font-body;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 3rem 2rem 0;
+
+  > footer {
+    margin-top: auto;
+    padding-top: 4rem;
+  }
+}

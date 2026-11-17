@@ -1,0 +1,41 @@
+title = "demo.catcrew.studio"
+
+base_url = "https://demo.catcrew.studio"
+
+compile_sass = true
+build_search_index = false
+feed_filenames = ["atom.xml"]
+
+[extra]
+site_title = "demo.catcrew.studio"
+copyright_holder = "catcrew.studio"
+copyright_url = "https://catcrew.studio"
+
+landing_lines = [
+  { text = "demo.", align = "right" },
+  { text = "catcrew", align = "left" },
+  { text = ".studio", align = "right" },
+]
+
+feed_path = "/blog"
+
+header_links = [
+  { name = "home", path = "/" },
+  { name = "about", path = "/about" },
+  { name = "blog", path = "/blog" },
+  { name = "links", path = "/links" },
+]
+
+footer_links = [
+  { name = "home", path = "/" },
+  { name = "about", path = "/about" },
+  { name = "blog", path = "/blog" },
+  { name = "links", path = "/links" },
+  { name = "source", path = "https://git.colorized.life/demo.catcrew.studio/about/" },
+]
+
+nav_links = [
+  { name = "about", path = "/about" },
+  { name = "blog", path = "/blog" },
+  { name = "links", path = "/links" },
+]

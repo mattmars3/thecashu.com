@@ -1,0 +1,35 @@
+// Typography — headings, paragraphs, links
+// Consumers: all templates
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--muted);
+  padding: 0.16em 0.28em;
+  border-radius: 0.3em;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--glow);
+  }
+}

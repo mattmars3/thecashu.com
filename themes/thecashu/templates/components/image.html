@@ -1,0 +1,36 @@
+{% component image(url, content_path="", position="full", alt="", caption="", url_min="") %}
+{%- set class = "img-figure img-full" -%}
+
+{%- if position == "left" or position == "right" or position == "center" or position == "full" -%}
+  {%- set class = "img-figure img-" ~ position -%}
+{%- endif -%}
+
+{%- if not url is starting_with(pat="/") and not url is starting_with(pat="http://") and not url is starting_with(pat="https://") and not url is starting_with(pat="//") -%}
+  {%- set url = content_path ~ url -%}
+{%- endif -%}
+
+{%- if not url is starting_with(pat="http://") and not url is starting_with(pat="https://") and not url is starting_with(pat="//") -%}
+  {%- set url = get_url(path=url, cachebust=true) -%}
+{%- endif -%}
+
+{%- if url_min and not url_min is starting_with(pat="/") and not url_min is starting_with(pat="http://") and not url_min is starting_with(pat="https://") and not url_min is starting_with(pat="//") -%}
+  {%- set url_min = content_path ~ url_min -%}
+{%- endif -%}
+
+{%- if url_min and not url_min is starting_with(pat="http://") and not url_min is starting_with(pat="https://") and not url_min is starting_with(pat="//") -%}
+  {%- set url_min = get_url(path=url_min, cachebust=true) -%}
+{%- endif -%}
+
+<figure class="{{ class | escape_html }}">
+  {%- if url_min -%}
+    <a href="{{ url | escape_html }}">
+      <img src="{{ url_min | escape_html }}" alt="{{ alt | escape_html }}" decoding="async" loading="lazy">
+    </a>
+  {%- else -%}
+    <img src="{{ url | escape_html }}" alt="{{ alt | escape_html }}" decoding="async" loading="lazy">
+  {%- endif -%}
+  {%- if caption -%}
+    <figcaption>{{ caption | escape_html }}</figcaption>
+  {%- endif -%}
+</figure>
+{% endcomponent image %}

@@ -1,0 +1,75 @@
+// About — mobile-first editorial reading layout
+// Consumer: about.html
+
+.about {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.about-header {
+  padding: 0.25rem 0 1.5rem;
+  text-align: center;
+}
+
+.about-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 12vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.about-body {
+  display: flow-root;
+  width: 100%;
+
+  > p:first-child {
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.65;
+  }
+
+  h2 {
+    clear: both;
+    margin: 2.75rem 0 1.25rem;
+    color: var(--accent);
+    font-size: 1.45rem;
+    line-height: 1.2;
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  }
+
+  h3 {
+    clear: both;
+    margin: 1.75rem 0 0.45rem;
+    color: var(--tertiary);
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (min-width: 48rem) {
+  .about-header {
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-body {
+    font-size: 1.05rem;
+
+    h2 {
+      margin-top: 3.25rem;
+      font-size: 1.55rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}

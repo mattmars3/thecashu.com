@@ -1,0 +1,24 @@
+// Variables — design tokens (palette, fonts, layout)
+// Consumers: all partials
+
+// Palette
+// $text: #26232a !default;      // Soft Ink — foreground
+// $bg: #f6f4f1 !default;        // Bone — background
+// $muted: #716b67 !default;     // Whiskey Grey — muted accent
+// $glow: #7ec8e8 !default;      // Sky — primary accent and glow
+// $accent: #3c739c !default;    // Window Blue — secondary accent
+// $tertiary: #9e593d !default;  // Ground Nutmeg — tertiary accent
+
+$text: #F2DEA2 !default;      // Soft Ink — foreground
+$bg: #000000 !default;        // Bone — background
+$muted: #F2DEA2 !default;     // Whiskey Grey — muted accent
+$glow: #40250E !default;      // Sky — primary accent and glow
+$accent: #D9831A !default;    // Window Blue — secondary accent
+$tertiary: #9e593d !default;  // Ground Nutmeg — tertiary accent
+
+// Fonts
+$font-body: "Urbanist", sans-serif !default;
+$font-mono: "IBM Plex Mono", monospace !default;
+
+// Layout
+$container-max: 860px !default;

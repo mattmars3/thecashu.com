@@ -1,0 +1,58 @@
+// Landing — oversized stacked wordmark and primary navigation
+// Consumer: index.html
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.landing-title {
+  display: flex;
+  margin: 0;
+  color: var(--accent);
+  font-family: $font-body;
+  font-size: clamp(4rem, 16vw, 11.5rem);
+  font-weight: 700;
+  line-height: 0.84;
+  letter-spacing: -0.055em;
+  text-align: left;
+
+  flex-direction: row;
+  // background-color: red;
+  align-items: center;
+}
+
+.landing-line {
+  display: block;
+  text-align: left;
+}
+
+.landing-line-left {
+  text-align: left;
+}
+
+.landing-line-center {
+  text-align: center;
+}
+
+.landing-line-right {
+  text-align: right;
+}
+
+.landing-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.5rem;
+  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(0.9rem, 3vw, 1.25rem);
+
+  a {
+    color: var(--text);
+    font-family: $font-body;
+  }
+}

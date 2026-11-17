@@ -1,0 +1,35 @@
+base_url = "https://thecashu.com"
+compile_sass = true
+build_search_index = true
+theme = "thecashu"
+
+taxonomies = [
+    {name = "categories", feed = true},
+]
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+site_title = "The CashU"
+copyright_holder = "The CashU LLC"
+latex = true
+
+nav_links = [
+  { name = "follow us on instagram", path = "https://www.instagram.com/thecashu?psln=Y3BxY3NrbHhxdzF6" },
+  { name = "subscribe on patreon", path = "https://patreon.com/TheCashU?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"},
+  { name = "check out our blog", path = "/blog" },
+]
+
+header_links = [
+  { name = "home", path = "/" },
+  { name = "follow us on instagram", path = "https://www.instagram.com/thecashu?psln=Y3BxY3NrbHhxdzF6" },
+  { name = "subscribe on patreon", path = "https://patreon.com/TheCashU?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"},
+  { name = "check out our blog", path = "/blog" },
+]
+
+footer_links = [
+
+]

@@ -1,0 +1,11 @@
+// Theme CSS custom properties — expose the Sass palette to consumers
+// Consumers: all partials (via var(--name) references)
+
+:root {
+  --text: #{$text};
+  --bg: #{$bg};
+  --muted: #{$muted};
+  --glow: #{$glow};
+  --accent: #{$accent};
+  --tertiary: #{$tertiary};
+}

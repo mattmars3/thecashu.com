@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%- block site_nav -%}{%- endblock -%}
+{% block content %}
+<main class="landing">
+  <h1 class="landing-title">
+    {{ <image url="thecashulogotransparent.PNG" /> }}
+    {% if config.extra.landing_lines is defined %}
+    {% for line in config.extra.landing_lines %}
+    <span class="landing-line{% if line.align is defined %} landing-line-{{ line.align }}{% endif %}">{{ line.text }}</span>
+    {% endfor %}
+    {% else %}
+    <div>
+      <span class="landing-line">{{ config.extra.site_title | default(value="example.tld") }}</span>
+    </div>
+    {% endif %}
+  </h1>
+  {% if config.extra.nav_links is defined %}
+  <nav class="landing-nav" aria-label="Primary navigation">
+    {% for link in config.extra.nav_links %}
+    <a href="{{ link.path }}">{{ link.name }}</a>
+    {% endfor %}
+  </nav>
+  {% endif %}
+</main>
+{% endblock %}

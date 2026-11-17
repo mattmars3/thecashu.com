@@ -1,0 +1,21 @@
+// 404 — not-found page
+// Consumer: 404.html
+
+.four-oh-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: $font-body;
+  font-size: clamp(6rem, 30vw, 24rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  --line-color: var(--muted);
+
+  @media (hover: none) {
+    a {
+      background-color: var(--glow);
+    }
+  }
+}

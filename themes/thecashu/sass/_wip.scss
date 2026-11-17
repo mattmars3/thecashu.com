@@ -1,0 +1,21 @@
+// WIP — under construction page
+// Consumer: wip.html
+
+.wip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: $font-body;
+  font-size: clamp(1.5rem, 5vw, 4rem); // knob: sized to keep "under construction" on one line
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  --line-color: var(--muted);
+
+  @media (hover: none) {
+    a {
+      background-color: var(--glow);
+    }
+  }
+}

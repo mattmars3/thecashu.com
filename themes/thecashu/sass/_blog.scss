@@ -1,0 +1,138 @@
+// Blog — post listing, single post, and pagination
+// Consumers: blog.html, post.html
+
+// ── Story Index ─────────────────────────────────────
+
+.blog-index {
+  width: 100%;
+}
+
+// Keep a page heading in the document outline without adding visible chrome.
+.blog-index-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.post-list {
+  width: 100%;
+  list-style: none;
+}
+
+.post-list-item + .post-list-item {
+  margin-top: clamp(2.2rem, 9vw, 3.25rem);
+}
+
+.post-list-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 6vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+
+  h2 {
+    color: var(--accent);
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 0.4em 0.28em;
+    margin: 0 -0.28em;
+    color: var(--accent);
+    overflow-wrap: anywhere;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.075em;
+    text-underline-offset: 0.14em;
+    transition:
+      background-color 0.2s,
+      text-decoration-color 0.2s;
+
+    &:hover,
+    &:active {
+      background-color: var(--glow);
+      text-decoration-color: transparent;
+    }
+
+    &:focus-visible {
+      background-color: var(--glow);
+      text-decoration-color: transparent;
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.post-list-summary {
+  max-width: 62ch;
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+  }
+}
+
+// ── Single Post ─────────────────────────────────────
+
+.post-meta {
+  font-family: $font-mono;
+  font-size: 0.8rem; // knob: post meta font size
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--glow);
+  margin: 1rem 0 1.5rem;
+}
+
+.post-body {
+  display: flow-root;
+
+  ul,
+  ol {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+h1,h2,h3 {
+  color: var(--accent);
+}
+
+// ── Pagination (blog listing) ───────────────────────
+
+.pagination,
+.post-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 6vw, 2.5rem);
+  width: 100%;
+  margin-top: clamp(3rem, 12vw, 5rem);
+  font-size: 1rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 0.5rem;
+    color: var(--muted);
+    text-decoration: underline;
+    text-decoration-thickness: 0.075em;
+    text-underline-offset: 0.14em;
+  }
+}

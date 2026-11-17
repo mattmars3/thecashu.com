@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#f6f4f1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f4f1">
+  {% include "partials/favicons.html" %}
+  {% include "partials/latex.html" %}
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+</head>
+<body>
+  <div class="container">
+    {%- block site_nav -%}
+    {% include "partials/header_nav.html" %}
+    {%- endblock -%}
+    {% block content %}{% endblock %}
+    <footer>
+      {% include "partials/copyright.html" %}
+    </footer>
+  </div>
+</body>
+</html>

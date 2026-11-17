@@ -1,0 +1,8 @@
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2") format("woff2");
+  size-adjust: 110%; // knob: mono runs small — tune relative to body font
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
+{% block content %}
+<section class="blog-index" aria-labelledby="blog-index-title">
+<h1 class="blog-index-title" id="blog-index-title">Latest stories</h1>
+<ol class="post-list">
+  {% for page in paginator.pages %}
+  <li class="post-list-item">
+    <article class="post-preview">
+      <h2 class="post-list-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      {% if page.description %}
+      <p class="post-list-summary">{{ page.description }}</p>
+      {% elif page.summary %}
+      <div class="post-list-summary">{{ page.summary | safe }}</div>
+      {% endif %}
+    </article>
+  </li>
+  {% endfor %}
+</ol>
+{% if paginator.previous or paginator.next %}
+<nav class="pagination" aria-label="Blog pagination">
+  {%- if paginator.previous %}<a href="{{ paginator.previous }}">&larr; newer posts</a>{% endif %}
+  {%- if paginator.next %}<a href="{{ paginator.next }}">older posts &rarr;</a>{% endif %}
+</nav>
+{% endif %}
+</section>
+{% endblock %}

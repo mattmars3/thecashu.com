@@ -1,0 +1,63 @@
+// Images — mobile-first figure positioning for the image shortcode
+// Consumer: shortcodes/image.html
+
+.img-figure {
+  // Full-width mobile settings:
+  // width: 100%;
+  // margin: 1.5rem 0;
+  width: min(88%, 24rem);
+  margin: 1.5rem auto;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  > a {
+    display: block;
+    padding: 0;
+    background: transparent;
+
+    &:hover,
+    &:focus-visible {
+      background: transparent;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 48rem) {
+  .img-full {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .img-center {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-left {
+    float: left;
+    width: 40%;
+    margin: 0 1.5rem 1rem 0;
+  }
+
+  .img-right {
+    float: right;
+    width: 40%;
+    margin: 0 0 1rem 1.5rem;
+  }
+}

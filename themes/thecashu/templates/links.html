@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+{% block content %}
+<ul class="links-list">
+  {% for item in page.extra.links %}
+  <li>
+    <a href="{{ item.url | safe }}">{{ item.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
