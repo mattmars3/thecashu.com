@@ -24,9 +24,9 @@ nav_links = [
 
 header_links = [
   { name = "home", path = "/" },
-  { name = "follow us on instagram", path = "https://www.instagram.com/thecashu?psln=Y3BxY3NrbHhxdzF6" },
-  { name = "subscribe on patreon", path = "https://patreon.com/TheCashU?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"},
-  { name = "check out our blog", path = "/blog" },
+  { name = "instagram", path = "https://www.instagram.com/thecashu?psln=Y3BxY3NrbHhxdzF6" },
+  { name = "patreon", path = "https://patreon.com/TheCashU?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"},
+  { name = "blog", path = "/blog" },
 ]
 
 footer_links = [

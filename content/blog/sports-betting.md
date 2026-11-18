@@ -6,6 +6,7 @@ draft = false
 
 [extra] 
 toc = true
+video_id = "eY2WLBvv0DE"
 +++
 # Statistics-Based Sports Betting Strategy
 Sports betting goes back thousands of years and has long been a pastime for sports enthusiasts. 

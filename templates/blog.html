@@ -8,6 +8,11 @@
   <li class="post-list-item">
     <article class="post-preview">
       <h2 class="post-list-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+
+      {% if page.extra.video_id %}
+        {{ <youtube_preview /> }}
+      {% endif %}
+
       {% if page.description %}
       <p class="post-list-summary">{{ page.description }}</p>
       {% elif page.summary %}

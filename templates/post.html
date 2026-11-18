@@ -7,7 +7,10 @@
     <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
   </div>
   <hr>
-  <!-- Youtube iFrame Here -->
+    {% if page.extra.video_id %}
+      {{ <youtube /> }}
+    {% endif %}
+  <hr>
   <div class="post-body">
     {{ page.content | safe }}
   </div>

@@ -7,6 +7,11 @@
   width: 100%;
 }
 
+article {
+  // to push away from sides a bit more on mobile
+  padding: 10px;
+}
+
 // Keep a page heading in the document outline without adding visible chrome.
 .blog-index-title {
   position: absolute;
